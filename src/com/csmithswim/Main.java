@@ -1,33 +1,26 @@
 package com.csmithswim;
 import java.util.Scanner;
 
-public class Main {
-/* Reverse the provided string. You may need to turn the string into an array before you can reverse it.
-Your result must be a string.
-ReverseString("hello") should return a string.
-reverseString("hello") should become "olleh".
-reverseString("Howdy") should become "ydwoH".
-reverseString("Greetings from Earth") should return "htraE morf sgniteerG".
+public class Main {/*
+Return the factorial of the provided integer.If the integer is represented with the letter n,
+a factorial is the product of all positive integers less than or equal to n.
+Factorials are often represented with the shorthand notation n!
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+factorialize(5) should return a number.
+factorialize(5) should return 120.
+factorialize(10) should return 3628800.
+factorialize(20) should return 2432902008176640000.
+factorialize(0) should return 1.
+Only integers greater than or equal to zero will be supplied to the function.
  */
-//    Method to reverse string using a for loop and substring method
+    public static int factorialize(int number){
 
-    public static String reverseString(String word){
-
-        String reversedString = "";
-
-        for (int i = word.length()-1; i >= 0; i--){
-
-            reversedString += word.substring(i,i+1);
-        }
-        System.out.println(reversedString);
-        return reversedString;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("This program reverses a word, please enter word to be reversed.\nWord: ");
+        System.out.print("");
         String input = scanner.nextLine();
-        reverseString(input);
     }
 }
 
