@@ -1,20 +1,51 @@
 package com.csmithswim;
-import java.util.Scanner;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
-public class Main {/*
-Return the length of the longest word in the provided sentence.
-Your response should be a number.
-findLongestWordLength("The quick brown fox jumped over the lazy dog") should return a number.
-findLongestWordLength("The quick brown fox jumped over the lazy dog") should return 6.
-findLongestWordLength("May the force be with you") should return 5.
-findLongestWordLength("Google do a barrel roll") should return 6.
-findLongestWordLength("What is the average airspeed velocity of an unladen swallow") should return 8.
-findLongestWordLength("What if we try a super-long word such as otorhinolaryngology") should return 19.
- */
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("This program will return the the length of the longest word in a given sentence.\nPlease input sentence to start:");
+public class Main {
+
+    // Complete the checkMagazine function below.
+    static void checkMagazine(String[] magazine, String[] note) {
+
 
     }
-}
 
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String[] mn = scanner.nextLine().split(" ");
+
+        int m = Integer.parseInt(mn[0]);
+
+        int n = Integer.parseInt(mn[1]);
+
+        String[] magazine = new String[m];
+
+        String[] magazineItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < m; i++) {
+            String magazineItem = magazineItems[i];
+            magazine[i] = magazineItem;
+        }
+
+        String[] note = new String[n];
+
+        String[] noteItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            String noteItem = noteItems[i];
+            note[i] = noteItem;
+        }
+
+        checkMagazine(magazine, note);
+
+        scanner.close();
+    }
+}
